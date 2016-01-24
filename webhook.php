@@ -11,23 +11,23 @@ if ($notification == NULL) {
 	exit();
 }
 
-foreach ($notification ["messages"] as $message) {
-	if ($message ["type"] != "menu_rating") {
+foreach ($notification["messages"] as $message) {
+	if ($message["type"] != "menu_rating") {
 		continue;
 	}
-	$poi = $message ["poi"];
-	writeLog($poi ["country"] . "\t");
-	writeLog($poi ["location"] . "\t");
-	writeLog($poi ["poi"] . "\t");
-	$rating = $message ["rating"];
-	writeLog($rating ["id"] . "\t");
-	writeLog($rating ["timestamp"] . "\t");
-	writeLog($rating ["stars"] . "\t");
-	$meal = $rating ["meal"];
-	writeLog($meal ["day"] . "\t");
-	$category = $meal ["category"];
-	writeLog($category ["position"] . "\t");
-	writeLog($meal ["position"] . "\n");
+	$poi = $message["poi"];
+	writeLog($poi["country"] . "\t");
+	writeLog($poi["location"] . "\t");
+	writeLog($poi["poi"] . "\t");
+	$rating = $message["rating"];
+	writeLog($rating["id"] . "\t");
+	writeLog($rating["timestamp"] . "\t");
+	writeLog($rating["stars"] . "\t");
+	$meal = $rating["meal"];
+	writeLog($meal["day"] . "\t");
+	$category = $meal["category"];
+	writeLog($category["position"] . "\t");
+	writeLog($meal["position"] . "\n");
 }
 
 function writeLog($content) {
