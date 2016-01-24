@@ -27,8 +27,9 @@ foreach ($notification["messages"] as $message) {
 	writeLog($meal["day"] . "\t");
 	$category = $meal["category"];
 	writeLog($category["position"] . "\t");
-	writeLog($meal["position"] . "\n");
-}
+	writeLog($meal["position"] . "\t");
+	writeLog($meal["reference"] . "\n");
+	}
 
 function writeLog($content) {
 	file_put_contents(LOG_FILE, $content, FILE_APPEND | LOCK_EX);
