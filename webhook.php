@@ -16,9 +16,7 @@ foreach ($notification["messages"] as $message) {
 		continue;
 	}
 	$poi = $message["poi"];
-	writeLog($poi["country"] . "\t");
-	writeLog($poi["location"] . "\t");
-	writeLog($poi["poi"] . "\t");
+	writeLog($poi["id"] . "\t");
 	$rating = $message["rating"];
 	writeLog($rating["id"] . "\t");
 	writeLog($rating["timestamp"] . "\t");
